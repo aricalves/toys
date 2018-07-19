@@ -4,7 +4,7 @@
   "description": "",
   "main": "",
   "scripts": {
-    "test": "mocha --recursive ./leetcode --watch"
+    "test": "mocha --recursive ./leetcode --watch --reporter=min"
   },
   "author": "Aric Alves aric.alves2012@gmail.com",
   "license": "ISC",
@@ -12,12 +12,16 @@
     "chai": "^4.1.2"
   },
   "repository": {
-    "type":"git",
-    "url":"https://github.com/aricalves/toys.git"
+    "type": "git",
+    "url": "https://github.com/aricalves/toys.git"
   },
   "devDependencies": {
-    "eslint": "^4.19.1",
+    "eslint": "^5.1.0",
     "eslint-config-airbnb-base": "^13.0.0",
-    "eslint-plugin-import": "^2.13.0"
+    "eslint-config-standard": "^11.0.0",
+    "eslint-plugin-import": "^2.13.0",
+    "eslint-plugin-node": "^7.0.1",
+    "eslint-plugin-promise": "^3.8.0",
+    "eslint-plugin-standard": "^3.1.0"
   }
 }
