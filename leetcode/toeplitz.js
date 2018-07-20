@@ -4,7 +4,29 @@
  */
 
 const isToeplitzMatrix = (matrix) => {
+  let col = 1
+  let row = matrix.length - 1
+  for (; row >= 0; row--) {
+    if (!checkDiagonal(matrix, row, 0)) {
+      return false
+    }
+  }
+  for (; col < matrix[0].length; col++) {
+    if (!checkDiagonal(matrix, 0, col)) {
+      return false
+    }
+  }
+  return true
+}
 
+const checkDiagonal = (matrix, row, col) => {
+  const n = matrix[row][col]
+  for (; col < matrix[0].length && row < matrix.length; row++, col++) {
+    if (matrix[row][col] !== n) {
+      return false
+    }
+  }
+  return true
 }
 
 /*
@@ -26,5 +48,6 @@ What if the matrix is so large that you can only load up a partial row into the 
 */
 
 module.exports = {
-  isToeplitzMatrix
+  isToeplitzMatrix,
+  checkDiagonal
 }

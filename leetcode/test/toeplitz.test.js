@@ -2,20 +2,20 @@ const { expect } = require('chai')
 const _ = require('../toeplitz')
 
 describe('Toeplitz Matrix', () => {
-  it('should do something', () => {
-    const toepMat = [
+  it('should return true when inspecting a toep matrix', () => {
+    const toeplitz = [
       [1, 2, 3, 4],
       [5, 1, 2, 3],
       [9, 5, 1, 2]
     ]
-    return expect(_.isToeplitzMatrix(toepMat)).to.be.true
+    return expect(_.isToeplitzMatrix(toeplitz)).to.be.true
   })
 
-  it('should do something else', () => {
-    const notToepMat = [
+  it('should return false when matrix is not toep', () => {
+    const noToeplitz = [
       [1, 2],
       [2, 2]
     ]
-    return expect(_.isToeplitzMatrix(notToepMat)).to.be.false
+    return expect(_.isToeplitzMatrix(noToeplitz)).to.be.false
   })
 })
