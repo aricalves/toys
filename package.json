@@ -4,7 +4,9 @@
   "description": "",
   "main": "",
   "scripts": {
-    "test": "mocha --recursive ./leetcode --watch --reporter=min"
+    "test": "mocha --recursive build --reporter=min",
+    "build": "babel src -d build",
+    "clean": "rm -rf build"
   },
   "author": "Aric Alves aric.alves2012@gmail.com",
   "license": "ISC",
@@ -16,6 +18,8 @@
     "url": "https://github.com/aricalves/toys.git"
   },
   "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
     "eslint": "^5.1.0",
     "eslint-config-airbnb-base": "^13.0.0",
     "eslint-config-standard": "^11.0.0",
