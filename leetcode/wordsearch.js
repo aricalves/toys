@@ -4,12 +4,12 @@
  * @return {boolean}
  */
 
-module.exports.exist = function (board, word) {
+module.exports.exist = (board, word) => {
   let doesExist = false
-  if (word == '') return true
+  if (!word) return true
 
   return doesExist
-};
+}
 
 /*
 Given a 2D board and a word, find if the word exists in the grid.
