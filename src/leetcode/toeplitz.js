@@ -47,7 +47,6 @@ What if the matrix is stored on disk, and the memory is limited such that you ca
 What if the matrix is so large that you can only load up a partial row into the memory at once?
 */
 
-module.exports = {
-  isToeplitzMatrix,
+export { isToeplitzMatrix,
   checkDiagonal
 }

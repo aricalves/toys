@@ -4,7 +4,7 @@
  * @return {boolean}
  */
 
-module.exports.exist = (board, word) => {
+const exist = (board, word) => {
   let doesExist = false
   if (!word) return true
 
@@ -19,3 +19,5 @@ where "adjacent" cells are those horizontally or vertically neighboring.
 The same letter cell may not be used more than once.
 
 */
+
+export { exist }

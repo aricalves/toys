@@ -1,17 +1,18 @@
 {
   "name": "toys",
   "version": "1.0.0",
-  "description": "",
+  "description": "Just a bunch of toy problems",
   "main": "",
   "scripts": {
-    "test": "mocha --recursive build --reporter=min",
-    "build": "babel src -d build",
+    "test": "concurrently \"npm run build\" \"mocha --recursive build --watch --reporter=min\"",
+    "build": "babel src -d build --watch",
     "clean": "rm -rf build"
   },
   "author": "Aric Alves aric.alves2012@gmail.com",
   "license": "ISC",
   "dependencies": {
-    "chai": "^4.1.2"
+    "chai": "^4.1.2",
+    "concurrently": "^3.6.1"
   },
   "repository": {
     "type": "git",
@@ -21,7 +22,6 @@
     "babel-cli": "^6.26.0",
     "babel-preset-env": "^1.7.0",
     "eslint": "^5.1.0",
-    "eslint-config-airbnb-base": "^13.0.0",
     "eslint-config-standard": "^11.0.0",
     "eslint-plugin-import": "^2.13.0",
     "eslint-plugin-node": "^7.0.1",

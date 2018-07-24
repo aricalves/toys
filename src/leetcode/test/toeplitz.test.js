@@ -1,6 +1,6 @@
-const expect = require('chai').expect
+import { expect } from 'chai'
 
-const isToeplitzMatrix = require('../toeplitz').isToeplitzMatrix
+import { isToeplitzMatrix } from '../toeplitz'
 
 /* eslint-env mocha */
 describe('Toeplitz Matrix', () => {

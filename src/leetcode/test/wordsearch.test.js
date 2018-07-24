@@ -1,6 +1,6 @@
-const expect = require('chai').expect
+import { expect } from 'chai'
 
-const exist = require('../wordsearch').exist
+import { exist } from '../wordsearch'
 
 /* eslint-env mocha */
 describe('Wordsearch', () => {
